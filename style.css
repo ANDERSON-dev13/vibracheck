@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #333;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  input, select {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  #resultado {
+    margin-top: 30px;
+    background-color: #eef6ff;
+    border: 1px solid #b3d4fc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  #resultado table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  #resultado th, #resultado td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .categoria-verde {
+    background-color: #c8e6c9;
+    font-weight: bold;
+    color: #256029;
+  }
+  
+  .categoria-amarelo {
+    background-color: #fff9c4;
+    font-weight: bold;
+    color: #a68b00;
+  }
+  
+  .categoria-laranja {
+    background-color: #ffe0b2;
+    font-weight: bold;
+    color: #bf360c;
+  }
+  
+  .categoria-vermelho {
+    background-color: #ffcdd2;
+    font-weight: bold;
+    color: #b71c1c;
+  }
+  
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+  
+    h1, h2, h3, h4 {
+      font-size: 18px;
+    }
+  
+    input, select, button {
+      font-size: 16px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    fieldset {
+      padding: 10px;
+    }
+  
+    label {
+      margin-bottom: 5px;
+    }
+  
+    #resultado table {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibraCheck - ISO 10816-3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>VibraCheck - ISO 10816-3</h1>
+    <p style="text-align: center; margin-top: -10px; font-size: 14px;">
+      DESENVOLVIDO POR<br> ANDERSON ARAUJO <strong>TÉCNICO EM MECÂNICA</strong>
+    </p>
+
+    <form id="form-vibracao">
+      <fieldset>
+        <legend>Dados do Equipamento</legend>
+        <div class="grid-2">
+          <label>Nome do Equipamento: <input type="text" id="numeroEquipamento"></label>
+          <label>TAG: <input type="text" id="tagEquipamento"></label>
+          <label>Potência do Motor (kW): <input type="number" id="potencia" required></label>
+          <label>RPM do Motor: <input type="number" id="rpmMotor" required></label>
+          <label>Tipo de Base:
+            <select id="base">
+              <option value="rigida">Rígida</option>
+              <option value="flexivel">Flexível</option>
+            </select>
+          </label>
+          <label>RPM da Bomba: <input type="number" id="rpmBomba" required></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Leituras de Vibração (mm/s RMS)</legend>
+        <div class="grid-3">
+          <div>
+            <h4>Motor</h4>
+            <label>H1: <input type="number" step="0.01" id="h1"></label>
+            <label>V1: <input type="number" step="0.01" id="v1"></label>
+            <label>H2: <input type="number" step="0.01" id="h2"></label>
+            <label>V2: <input type="number" step="0.01" id="v2"></label>
+            <label>A2: <input type="number" step="0.01" id="a2"></label>
+          </div>
+
+          <div>
+            <h4>Bomba</h4>
+            <label>H3: <input type="number" step="0.01" id="h3"></label>
+            <label>V3: <input type="number" step="0.01" id="v3"></label>
+            <label>H4: <input type="number" step="0.01" id="h4"></label>
+            <label>V4: <input type="number" step="0.01" id="v4"></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit">Analisar</button>
+    </form>
+
+    <section id="resultado">
+      <h2>Resultado da Avaliação</h2>
+      <div id="relatorio">
+        <p>As medições foram feitas com medidor de vibração em três eixos:</p>
+        <ul>
+          <li>Vertical (V), horizontal (H) e axial (A), conforme diagrama de pontos.</li>
+          <li>As vibrações mais elevadas observadas se concentram especialmente no lado acoplado da bomba.</li>
+        </ul>
+      </div>
+      <div id="output"></div>
+
+      <section id="referencias">
+        <h2>Referências Técnicas</h2>
+        <p>Imagens utilizadas como base técnica para análise de vibração conforme normas ISO e diagramas operacionais:</p>
+        <div class="img-referencias">
+          <img src="img/tabela-blake.jpg" alt="Tabela de Blake Modificado">
+          <img src="img/diagrama-pontos.jpg" alt="Diagrama de Pontos de Medição">
+          <img src="img/tabela-iso.jpg" alt="Tabela ISO 20816-3">
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <p>© 2025 VibraCheck - Todos os direitos reservados</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
